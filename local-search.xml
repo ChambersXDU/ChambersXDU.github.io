@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>汇编入门1</title>
+    <link href="/2022/02/11/%E6%B1%87%E7%BC%96%E5%85%A5%E9%97%A81/"/>
+    <url>/2022/02/11/%E6%B1%87%E7%BC%96%E5%85%A5%E9%97%A81/</url>
+    
+    <content type="html"><![CDATA[<h2 id="二进制的四则运算"><a href="#二进制的四则运算" class="headerlink" title="二进制的四则运算"></a>二进制的四则运算</h2><p><strong>加法</strong></p><figure class="highlight shell"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></div></td><td class="code"><pre><code class="hljs shell">@ how to calculate this?<br>0000 0100<br>0000 0101 + <br>-----------<br>0000 1001<br><br>@实际上就是数电里的加法器<br><br>@steps:<br><span class="hljs-meta">#</span><span class="language-bash">1 异或 --&gt; 做加法</span><br>0000 0100<br>0000 0101 xor<br>-----------<br>0000 0001<br><span class="hljs-meta"></span><br><span class="hljs-meta">#</span><span class="language-bash">2 与运算 --&gt; 输出进位，只有 1+1才会进位(若还有进位则继续，无进位则结束运算)</span><br>0000 0100<br>0000 0101 or<br>-----------<br>0000 0100<br><span class="hljs-meta"></span><br><span class="hljs-meta">#</span><span class="language-bash">3 左移2的结果 --&gt;进位要到高位去</span><br>0000 1000<br><br>@（重复1 2 3）<br><span class="hljs-meta"></span><br><span class="hljs-meta">#</span><span class="language-bash">4 1与3 异或 --&gt;让进位与和数相加</span><br>0000 0001<br>0000 1000 xor<br>------------<br>0000 1001<br><span class="hljs-meta"></span><br><span class="hljs-meta">#</span><span class="language-bash">5 与运算 --&gt; 若还有进位则继续重复，无进位则结束运算</span><br>0000 0001<br>0000 1000 or<br>-----------<br>0000 0000<br><br>@answer 0000 1001<br><br><br></code></pre></td></tr></table></figure><p><img src="https://img-blog.csdnimg.cn/20190706225927723.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTE1NDYzNg==,size_16,color_FFFFFF,t_70" alt="半加器"></p><p><strong>减法</strong></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs shell">4 - 5 = 4+(-5)<br><br>把&quot;减5&quot;变为&quot;加-5&quot;<br>然后其余步骤与加法无异<br><br>0000 0100<br>1111 1011 +<br>-----------<br>1111 1111<br></code></pre></td></tr></table></figure><p><strong>乘法</strong></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">x*y = x+x+x+···+x  <br></code></pre></td></tr></table></figure><p><strong>除法</strong></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">x/y = x能减几个y = x能加几个-y<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>汇编</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>用hexo与github搭建博客：新手指南</title>
+    <link href="/2022/02/11/%E7%94%A8hexo%E4%B8%8Egithub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%9A%E6%96%B0%E6%89%8B%E6%8C%87%E5%8D%97/"/>
+    <url>/2022/02/11/%E7%94%A8hexo%E4%B8%8Egithub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%9A%E6%96%B0%E6%89%8B%E6%8C%87%E5%8D%97/</url>
+    
+    <content type="html"><![CDATA[<h2 id="搭建环境"><a href="#搭建环境" class="headerlink" title="搭建环境"></a>搭建环境</h2><p>首先需要准备好这几样东西：</p><p><strong>node.js</strong></p><p><strong>Github账号</strong></p><p><strong>Git</strong></p><p>在官网分别下载、注册好即可</p><p>打开hexo的官网</p><h2 id="踩过的一些坑"><a href="#踩过的一些坑" class="headerlink" title="踩过的一些坑"></a>踩过的一些坑</h2><p><a href="https://blog.csdn.net/weixin_45637036/article/details/106560217">connect timed out 解决方案</a></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  
+</search>
