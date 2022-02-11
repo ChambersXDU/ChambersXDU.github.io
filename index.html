@@ -4,17 +4,17 @@
   <meta charset="utf-8">
   
   
-  <title>Hexo</title>
+  <title>the bolg of Chambers</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:title" content="the bolg of Chambers">
+<meta property="og:url" content="https://chambersxdu.github.io/index.html">
+<meta property="og:site_name" content="the bolg of Chambers">
 <meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
+<meta property="article:author" content="Jiang">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="the bolg of Chambers" type="application/atom+xml">
   
   
     <link rel="shortcut icon" href="/favicon.png">
@@ -42,7 +42,7 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
+        <a href="/" id="logo">the bolg of Chambers</a>
       </h1>
       
     </div>
@@ -62,7 +62,7 @@
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://chambersxdu.github.io"></form>
       </div>
     </div>
   </div>
@@ -70,59 +70,6 @@
 
       <div class="outer">
         <section id="main">
-  
-    <article id="post-test" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/02/11/test/" class="article-date">
-  <time class="dt-published" datetime="2022-02-11T04:03:51.000Z" itemprop="datePublished">2022-02-11</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/02/11/test/">test</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p><strong>加法</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">@ how to calculate this?</span><br><span class="line">0000 0100</span><br><span class="line">0000 0101 + </span><br><span class="line">-----------</span><br><span class="line">0000 1001</span><br><span class="line"></span><br><span class="line">@实际上就是数电里的加法器</span><br><span class="line"></span><br><span class="line">@steps:</span><br><span class="line"><span class="meta">#</span><span class="language-bash">1 异或 --&gt; 做加法</span></span><br><span class="line">0000 0100</span><br><span class="line">0000 0101 xor</span><br><span class="line">-----------</span><br><span class="line">0000 0001</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">2 与运算 --&gt; 输出进位，只有 1+1才会进位(若还有进位则继续，无进位则结束运算)</span></span><br><span class="line">0000 0100</span><br><span class="line">0000 0101 or</span><br><span class="line">-----------</span><br><span class="line">0000 0100</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">3 左移2的结果 --&gt;进位要到高位去</span></span><br><span class="line">0000 1000</span><br><span class="line"></span><br><span class="line">@（重复1 2 3）</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">4 1与3 异或 --&gt;让进位与和数相加</span></span><br><span class="line">0000 0001</span><br><span class="line">0000 1000 or</span><br><span class="line">------------</span><br><span class="line">0000 1001</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">5 与运算 --&gt; 若还有进位则继续重复，无进位则结束运算</span></span><br><span class="line">0000 0001</span><br><span class="line">0000 1000 or</span><br><span class="line">-----------</span><br><span class="line">0000 0000</span><br><span class="line"></span><br><span class="line">@answer 0000 1001</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://img-blog.csdnimg.cn/20190706225927723.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTE1NDYzNg==,size_16,color_FFFFFF,t_70" alt="img"></p>
-<p><strong>减法</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">4 - 5 = 4+(-5)</span><br><span class="line"></span><br><span class="line">把&quot;减5&quot;变为&quot;加-5&quot;</span><br><span class="line">然后其余步骤与加法无异</span><br><span class="line"></span><br><span class="line">0000 0100</span><br><span class="line">1111 1011 +</span><br><span class="line">-----------</span><br><span class="line">1111 1111</span><br></pre></td></tr></table></figure>
-
-
-
-<p>乘法</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x*y = x+x+x+···+x  </span><br></pre></td></tr></table></figure>
-
-<p>除法</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x/y = x能减几个y = x能加几个-y</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/11/test/" data-id="ckzhxm5nk0001wow3ddj6hbfb" data-title="test" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
   
     <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
@@ -163,7 +110,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/10/hello-world/" data-id="ckzhxm5nd0000wow3a2wneh65" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="https://chambersxdu.github.io/2022/02/10/hello-world/" data-id="ckzhyddft0001ygw35wluc06n" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
@@ -206,10 +153,6 @@
       <ul>
         
           <li>
-            <a href="/2022/02/11/test/">test</a>
-          </li>
-        
-          <li>
             <a href="/2022/02/10/hello-world/">Hello World</a>
           </li>
         
@@ -226,7 +169,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       
-      &copy; 2022 John Doe<br>
+      &copy; 2022 Jiang<br>
       Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
