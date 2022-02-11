@@ -23,11 +23,15 @@
 <meta property="og:site_name" content="艾梣的博客">
 <meta property="og:description" content="搭建环境首先需要准备好这几样东西： node.js https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F; Github账号 https:&#x2F;&#x2F;github.com&#x2F; Git https:&#x2F;&#x2F;git-scm.com&#x2F; typora ，或者其他可以编辑Markdown文件的软件。（如果你不知道Markdown是什么,请先花半小时了解一下) 在官网分别下载、注册、安装好即可。 打开hexo的官网文档 https:">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="c:/Users/Chamb/AppData/Roaming/Typora/typora-user-images/image-20220211215632768.png">
+<meta property="og:image" content="c:/Users/Chamb/AppData/Roaming/Typora/typora-user-images/image-20220211215730975.png">
+<meta property="og:image" content="c:/Users/Chamb/AppData/Roaming/Typora/typora-user-images/image-20220211220249720.png">
 <meta property="article:published_time" content="2022-02-11T06:25:03.000Z">
-<meta property="article:modified_time" content="2022-02-11T11:26:25.253Z">
+<meta property="article:modified_time" content="2022-02-11T14:31:59.692Z">
 <meta property="article:author" content="Chambers">
 <meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="c:/Users/Chamb/AppData/Roaming/Typora/typora-user-images/image-20220211215632768.png">
   
   
   <title>用hexo与github搭建博客：新手指南 - 艾梣的博客</title>
@@ -152,6 +156,18 @@
             </li>
           
         
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
@@ -197,7 +213,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.1k 字
+      2.4k 字
     </span>
   
 
@@ -206,7 +222,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      10 分钟
+      21 分钟
     </span>
   
 
@@ -247,7 +263,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：4 分钟前
+                  本文最后更新于：几秒前
                 
               </p>
             
@@ -259,17 +275,19 @@
 <p><strong>typora</strong> ，或者其他可以编辑Markdown文件的软件。（如果你不知道Markdown是什么,请先花半小时了解一下)</p>
 <p>在官网分别下载、注册、安装好即可。</p>
 <p>打开hexo的官网文档 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs">https://hexo.io/zh-cn/docs</a> 按照要求安装hexo。</p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>在 git bash 中输入以下命令,即可自动开始安装hexo</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">$ </span><span class="language-bash">npm install -g hexo-cli</span><br></code></pre></td></tr></table></figure>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>在桌面或者文件夹的空白位置右击，你可以看到Git Bash Here这个选项，点击就会打开一个黑框框，这就是bash，一个可供你输入命令的地方，类似Windows自带的cmd。</p>
+<p>在 git bash 中输入以下命令,即可自动开始安装hexo</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><pre><code class="hljs shell">npm install -g hexo-cli<br></code></pre></td></tr></table></figure>
 
+<p>注意，当bash的最后一行没有出现$时，说明它正在运行上一个命令，需要继续等待或者用<code>Ctrl+C</code>终止。</p>
 <h2 id="搭建博客"><a href="#搭建博客" class="headerlink" title="搭建博客"></a>搭建博客</h2><p>在 git bash 中输入</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">$ </span><span class="language-bash">hexo init 文件名 //这就是你博客的文件，名字可以自行更换，默认存到c://user之下</span><br><span class="hljs-meta">$ </span><span class="language-bash"><span class="hljs-built_in">cd</span> 文件名</span><br><span class="hljs-meta">$ </span><span class="language-bash">npm install</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell">hexo init 文件名 #这就是你博客的文件，名字可以自行更换，默认存到c://user之下<br>cd 文件名<br>npm install<br></code></pre></td></tr></table></figure>
 
 <p>这时你已经建好了你的博客，在bash中输入</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">$ </span><span class="language-bash">hexo clean &amp;&amp; hexo generate &amp;&amp; hexo server</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">hexo clean &amp;&amp; hexo generate &amp;&amp; hexo server<br></code></pre></td></tr></table></figure>
 
 <p>如果成功，几秒后就会输出这句话</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">$ </span><span class="language-bash">INFO  Hexo is running at http://localhost:4000/ . Press Ctrl+C to stop.</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">INFO  Hexo is running at http://localhost:4000/ . Press Ctrl+C to stop.<br></code></pre></td></tr></table></figure>
 
 <p>在浏览器上输入这个网址<a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a> 就能进入初始化状态的博客了，当你按 <code>Ctrl + C</code> 或者关闭 bash， 网页将会停止访问。<br>(这只是本地的网页，想要通过互联网访问还需要借助github)</p>
 <p>找到你的博客文件夹，打开可以看见一些基础的配置文件，比如：</p>
@@ -281,13 +299,53 @@
 <p><strong>_config.landscape.yml</strong></p>
 <p>这是hexo的默认主题landscape的配置文件，可以对其自行修改(之后假如安装了其他的主题，也会生成类似的.yml文件以供修改)</p>
 <h2 id="第一篇文章"><a href="#第一篇文章" class="headerlink" title="第一篇文章"></a>第一篇文章</h2><p>在博客的目录下打开 bash ，输入</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">$ </span><span class="language-bash">hexo new 文章名字</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">hexo new 文章名字<br></code></pre></td></tr></table></figure>
 
 <p>就会在source&#x2F;_post&#x2F;下看见 文章名字.md 文件，他已经自带了标题、时间、标签的格式，可以自行修改。<br>（注意冒号后面一定要有一个空格，否则生成网页的时候会报错）</p>
 <p>然后你可以自由编辑你的文章，保存好后在 bash 中输入</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">$ </span><span class="language-bash">hexo clean &amp;&amp; hexo generate &amp;&amp; hexo server</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">hexo clean &amp;&amp; hexo generate &amp;&amp; hexo server<br></code></pre></td></tr></table></figure>
 
 <p>再次访问 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a> ，你会发现你的文章已经创建好了，就是这么简单。</p>
+<h3 id="hexo里的几个常用命令"><a href="#hexo里的几个常用命令" class="headerlink" title="hexo里的几个常用命令"></a>hexo里的几个常用命令</h3><ul>
+<li>npm install hexo -g  #安装Hexo</li>
+<li>npm update hexo -g  #升级</li>
+<li>hexo init  #初始化博客</li>
+<li>hexo n “我的博客” &#x3D;&#x3D; hexo new “我的博客”  #新建文章</li>
+<li>hexo g &#x3D;&#x3D; hexo generate  #生成</li>
+<li>hexo s &#x3D;&#x3D; hexo server  #启动本地预览</li>
+<li>hexo d &#x3D;&#x3D; hexo deploy  #部署到远程</li>
+<li>hexo clean  #清除缓存，若网页正常,可以忽略</li>
+</ul>
+<h2 id="接上互联网"><a href="#接上互联网" class="headerlink" title="接上互联网"></a>接上互联网</h2><p>博客虽然已经搭建好了，但是只能够本地访问，要想通过互联网访问，就需要借助Github了</p>
+<p>首先你需要在你的Github创建一个新的仓库：xxxx.github.io （xxxx是你的github用户名，这里的格式是固定的）</p>
+<p>在你的bash上，配置好以下的信息</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config --global user.name GitHub用户名<br>git config --global user.email GitHub注册邮箱<br></code></pre></td></tr></table></figure>
+
+<p>你可以通过以下命令确认信息是否正确</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config user.name<br>git config user.email<br></code></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\Chamb\AppData\Roaming\Typora\typora-user-images\image-20220211215632768.png" srcset="/img/loading.gif" lazyload alt="image-20220211215632768"></p>
+<p>然后生成ssh密钥文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">ssh-keygen -t rsa -C GitHub注册邮箱<br><span class="hljs-comment">#注意，执行此行并不会立即生成.ssh文件，要按接下来的提示，敲几次回车才能成功生成.ssh</span><br></code></pre></td></tr></table></figure>
+
+<p>然后找到生成的.ssh的文件夹中的id_rsa.pub，将内容全部复制</p>
+<p>打开打开<a href="https://link.zhihu.com/?target=https://github.com/settings/keys">GitHub_Settings_keys</a> 页面，新建new SSH Key，将复制的内容全部粘贴进去。</p>
+<p>在Git Bash中检测GitHub公钥设置是否成功，输入 :</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">ssh git@github.com<br></code></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\Chamb\AppData\Roaming\Typora\typora-user-images\image-20220211215730975.png" srcset="/img/loading.gif" lazyload alt="image-20220211215730975">出现以上内容则表示成功。</p>
+<p>打开博客文件夹中的_config.yml文件，翻到最下面，修改为下图中的格式</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">deploy:</span><br>  <span class="hljs-attr">type:</span> <span class="hljs-string">git</span><br>  <span class="hljs-attr">repo:</span> <span class="hljs-string">git@github.com:xxxx.github.io.git</span><br>  <span class="hljs-attr">branch:</span> <span class="hljs-string">master</span> <br><span class="hljs-comment">#branch这一行可以省略  </span><br></code></pre></td></tr></table></figure>
+
+<p>记住一定要在冒号后面加空格！！！</p>
+<p><img src="C:\Users\Chamb\AppData\Roaming\Typora\typora-user-images\image-20220211220249720.png" srcset="/img/loading.gif" lazyload alt="image-20220211220249720"></p>
+<p>其实就是给hexo deploy 这个命令做相应的配置，让hexo知道你要把博客部署在哪个位置，很显然，我们部署在我们GitHub的仓库里。最后安装Git部署插件，输入命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs basemake">npm install hexo-deployer-git --save<br></code></pre></td></tr></table></figure>
+
+<p>这时，我们分别输入三条命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean <br>hexo g <br>hexo d<br></code></pre></td></tr></table></figure>
+
+<p>其实第三条的 hexo d 就是部署网站命令，d是deploy的缩写。完成后，打开浏览器，在地址栏输入你的放置个人网站的仓库路径，即 <a href="https://link.zhihu.com/?target=http://xxxx.github.io">http://xxxx.github.io</a> (知乎排版可能会出现”http:&#x2F;&#x2F;“字样，参考下图)</p>
 <h2 id="踩过的一些坑"><a href="#踩过的一些坑" class="headerlink" title="踩过的一些坑"></a>踩过的一些坑</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45637036/article/details/106560217">connect timed out 解决方案</a></p>
 
             </div>
