@@ -28,7 +28,7 @@
 <meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/02/31289c5c9fbc4de5.png">
 <meta property="og:image" content="https://chambersxdu.github.io/2022/02/11/%E7%94%A8hexo%E4%B8%8Egithub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%9A%E6%96%B0%E6%89%8B%E6%8C%87%E5%8D%97/jietu.png">
 <meta property="article:published_time" content="2022-02-11T06:25:03.000Z">
-<meta property="article:modified_time" content="2022-02-12T09:21:41.091Z">
+<meta property="article:modified_time" content="2022-02-12T09:53:06.951Z">
 <meta property="article:author" content="Chambers">
 <meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary_large_image">
@@ -223,7 +223,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      25 分钟
+      24 分钟
     </span>
   
 
@@ -264,7 +264,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：6 分钟前
+                  本文最后更新于：几秒前
                 
               </p>
             
@@ -312,15 +312,11 @@
 
 <p>再次访问 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a> ，你会发现你的文章已经创建好了，就是这么简单👍。</p>
 <h3 id="hexo里的几个常用命令"><a href="#hexo里的几个常用命令" class="headerlink" title="hexo里的几个常用命令"></a>hexo里的几个常用命令</h3><ul>
-<li><p>npm install hexo -g  #安装Hexo</p>
-</li>
-<li><p>npm update hexo -g  #升级</p>
-</li>
-<li><p>hexo init  #初始化博客</p>
+<li><p>hexo init  #初始化博客（搭建博客的时候会使用一次）</p>
 </li>
 <li><p>hexo n “我的博客” &#x3D;&#x3D; hexo new “我的博客”  #新建文章</p>
 </li>
-<li><p>hexo g &#x3D;&#x3D; hexo generate  #把source里的md渲染成html</p>
+<li><p>hexo g &#x3D;&#x3D; hexo generate  #从source生成public文件</p>
 </li>
 <li><p>hexo s &#x3D;&#x3D; hexo server  #启动本地预览</p>
 </li>
@@ -329,6 +325,7 @@
 <li><p>hexo clean  #清空public目录</p>
 </li>
 </ul>
+<p>详见 👉 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/commands">指令 | Hexo</a></p>
 <h2 id="接上互联网"><a href="#接上互联网" class="headerlink" title="接上互联网"></a>接上互联网</h2><p>博客虽然已经搭建好了，但是只能够本地访问，要想通过互联网访问，就需要借助Github了</p>
 <p>首先你需要在你的Github创建一个新的仓库：xxxx.github.io （xxxx是你的github用户名，这里的格式是固定的）</p>
 <p>在你的bash上，配置好以下的信息</p>
@@ -342,7 +339,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">ssh-keygen -t rsa -C GitHub注册邮箱<br><span class="hljs-comment">#注意，执行此行并不会立即生成.ssh文件，要按接下来的提示，敲几次回车才能成功生成.ssh</span><br></code></pre></td></tr></table></figure>
 
 <p>然后找到生成的.ssh的文件夹中的id_rsa.pub，将内容全部复制</p>
-<p>打开打开<a href="https://link.zhihu.com/?target=https://github.com/settings/keys">GitHub_Settings_keys</a> 页面，新建new SSH Key，将复制的内容全部粘贴进去。</p>
+<p>打开打开<a href="github.com/settings/keys">GitHub_Settings_keys</a> 页面，新建new SSH Key，将复制的内容全部粘贴进去。</p>
 <p>在Git Bash中检测GitHub公钥设置是否成功，输入 :</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">ssh git@github.com<br></code></pre></td></tr></table></figure>
 
@@ -358,14 +355,15 @@
 <p>这时，我们分别输入三条命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean <br>hexo g <br>hexo d<br></code></pre></td></tr></table></figure>
 
-<p>其实第三条的 hexo d 就是部署网站命令，d是deploy的缩写。完成后，打开浏览器，在地址栏输入你的放置个人网站的仓库路径，即 <a href="https://link.zhihu.com/?target=http://xxxx.github.io">http://xxxx.github.io</a> (知乎排版可能会出现”http:&#x2F;&#x2F;“字样，参考下图)</p>
+<p>其实第三条的 hexo d 就是部署网站命令，d是deploy的缩写。完成后，打开浏览器，在地址栏输入你的放置个人网站的仓库路径，即 xxxxx.github.io</p>
 <h2 id="踩过的一些坑⚠️"><a href="#踩过的一些坑⚠️" class="headerlink" title="踩过的一些坑⚠️"></a>踩过的一些坑⚠️</h2><h3 id="在-bash-里-github-连不上"><a href="#在-bash-里-github-连不上" class="headerlink" title="在 bash 里 github 连不上"></a>在 bash 里 github 连不上</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45637036/article/details/106560217">connect timed out 解决方案</a></p>
 <h3 id="图片不出现在网页上"><a href="#图片不出现在网页上" class="headerlink" title="图片不出现在网页上"></a>图片不出现在网页上</h3><p>有三种办法：</p>
 <ul>
-<li><p><strong>相对路径</strong>：在source目录里手动新建一个img文件夹，在里面存图片文件，需要时引用相对路径<code>/img/xxxx.jpg</code> 。</p>
+<li><p><strong>相对路径</strong>：在source目录里手动新建一个img文件夹，在里面存图片文件，需要时引用相对路径<code>img/xxxx.jpg</code> 。</p>
 <p>适合在.yml里面添加头像等图片时使用，不适合写文章时使用（因为编辑器找不到这个相对路径）</p>
 </li>
 <li><p><strong>网络链接</strong>：在网上找一个图床网站，上传图片以获取链接，直接复制链接即可</p>
+<p>转换不太方便，且加载比较慢</p>
 </li>
 <li><p><strong>官方插件</strong>：</p>
 <ul>
