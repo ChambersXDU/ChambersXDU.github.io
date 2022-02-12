@@ -23,11 +23,13 @@
 <meta property="og:site_name" content="艾梣的博客">
 <meta property="og:description" content="前言使用github部署博客虽然方便，但是由于github本身在美国，访问博客经常很慢或者打不开。因此考虑同时在国内的同类型网站上部署。 这里，我选择国内的码云Gittee  作为第二仓库。 步骤 首先我们先注册一个码云账号，建立一个 xxxxxx.gittee.io的仓库，在建立的时候默认选项就好，不需要添加其他东西。  在仓库页面的“服务”选项中打开Gittee Pages，提交你的身份信息并">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://chambersxdu.github.io/2022/02/12/%E5%A4%9A%E4%BB%93%E5%BA%93%E9%83%A8%E7%BD%B2hexo%E5%8D%9A%E5%AE%A2/deploy.png">
 <meta property="article:published_time" content="2022-02-12T07:28:57.000Z">
-<meta property="article:modified_time" content="2022-02-12T07:49:12.959Z">
+<meta property="article:modified_time" content="2022-02-12T08:30:47.553Z">
 <meta property="article:author" content="Chambers">
 <meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://chambersxdu.github.io/2022/02/12/%E5%A4%9A%E4%BB%93%E5%BA%93%E9%83%A8%E7%BD%B2hexo%E5%8D%9A%E5%AE%A2/deploy.png">
   
   
   <title>多仓库部署hexo博客 - 艾梣的博客</title>
@@ -259,7 +261,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：26 分钟前
+                  本文最后更新于：几秒前
                 
               </p>
             
@@ -277,6 +279,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#若出现这句话说明成功连接，键入yes并回车即可成功链接</span><br>Are you sure you want to <span class="hljs-built_in">continue</span> connecting (<span class="hljs-built_in">yes</span>/no/[fingerprint])? <br></code></pre></td></tr></table></figure>
 </li>
 <li><p>打开_config.yml文件，配置deploy选项，在不同仓库地址之前加上描述以示区分（注意冒号后空格）</p>
+<p><img src="/2022/02/12/%E5%A4%9A%E4%BB%93%E5%BA%93%E9%83%A8%E7%BD%B2hexo%E5%8D%9A%E5%AE%A2/deploy.png" srcset="/img/loading.gif" lazyload alt="deploy"></p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">deploy:</span><br>  <span class="hljs-attr">type:</span> <span class="hljs-string">git</span><br>  <span class="hljs-attr">repo:</span> <br>    <span class="hljs-attr">github:</span> <span class="hljs-string">git@github.com:ChambersXDU/ChambersXDU.github.io.git</span><br>    <span class="hljs-attr">gittee:</span> <span class="hljs-string">git@gitee.com:aichenxdu/aichenxdu.gittee.io.git</span><br></code></pre></td></tr></table></figure>
 </li>
 <li><p>清除、生成、部署</p>
