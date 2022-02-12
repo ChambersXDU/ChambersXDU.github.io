@@ -23,15 +23,15 @@
 <meta property="og:site_name" content="艾梣的博客">
 <meta property="og:description" content="搭建环境首先需要准备好这几样东西： node.js https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F; Github账号 https:&#x2F;&#x2F;github.com&#x2F; Git https:&#x2F;&#x2F;git-scm.com&#x2F; typora ，或者其他可以编辑Markdown文件的软件。（如果你不知道Markdown是什么,请先花半小时了解一下) 在官网分别下载、注册、安装好即可。 打开hexo的官网文档 https:">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="c:/Users/Chamb/AppData/Roaming/Typora/typora-user-images/image-20220211215632768.png">
-<meta property="og:image" content="c:/Users/Chamb/AppData/Roaming/Typora/typora-user-images/image-20220211215730975.png">
-<meta property="og:image" content="c:/Users/Chamb/AppData/Roaming/Typora/typora-user-images/image-20220211220249720.png">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/02/987f5303a789b0b1.png">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/02/442ba79215296bd2.png">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/02/31289c5c9fbc4de5.png">
 <meta property="article:published_time" content="2022-02-11T06:25:03.000Z">
-<meta property="article:modified_time" content="2022-02-11T14:31:59.692Z">
+<meta property="article:modified_time" content="2022-02-12T06:16:47.992Z">
 <meta property="article:author" content="Chambers">
 <meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="c:/Users/Chamb/AppData/Roaming/Typora/typora-user-images/image-20220211215632768.png">
+<meta name="twitter:image" content="https://s3.bmp.ovh/imgs/2022/02/987f5303a789b0b1.png">
   
   
   <title>用hexo与github搭建博客：新手指南 - 艾梣的博客</title>
@@ -263,7 +263,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：14 小时前
+                  本文最后更新于：几秒前
                 
               </p>
             
@@ -298,6 +298,7 @@
 <p>之后每次需要生成新的页面，执行 <code>hexo new xxx</code> 的时候，就会在这里生成新的文件。</p>
 <p><strong>_config.landscape.yml</strong></p>
 <p>这是hexo的默认主题landscape的配置文件，可以对其自行修改(之后假如安装了其他的主题，也会生成类似的.yml文件以供修改)</p>
+<p>更详细的文件结构可以参考这个文章 <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/cfd05c35833c">Hexo文件结构</a></p>
 <h2 id="第一篇文章"><a href="#第一篇文章" class="headerlink" title="第一篇文章"></a>第一篇文章</h2><p>在博客的目录下打开 bash ，输入</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">hexo new 文章名字<br></code></pre></td></tr></table></figure>
 
@@ -311,10 +312,10 @@
 <li>npm update hexo -g  #升级</li>
 <li>hexo init  #初始化博客</li>
 <li>hexo n “我的博客” &#x3D;&#x3D; hexo new “我的博客”  #新建文章</li>
-<li>hexo g &#x3D;&#x3D; hexo generate  #生成</li>
+<li>hexo g &#x3D;&#x3D; hexo generate  #把source里的md渲染成html</li>
 <li>hexo s &#x3D;&#x3D; hexo server  #启动本地预览</li>
 <li>hexo d &#x3D;&#x3D; hexo deploy  #部署到远程</li>
-<li>hexo clean  #清除缓存，若网页正常,可以忽略</li>
+<li>hexo clean  #清空public目录</li>
 </ul>
 <h2 id="接上互联网"><a href="#接上互联网" class="headerlink" title="接上互联网"></a>接上互联网</h2><p>博客虽然已经搭建好了，但是只能够本地访问，要想通过互联网访问，就需要借助Github了</p>
 <p>首先你需要在你的Github创建一个新的仓库：xxxx.github.io （xxxx是你的github用户名，这里的格式是固定的）</p>
@@ -324,7 +325,7 @@
 <p>你可以通过以下命令确认信息是否正确</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config user.name<br>git config user.email<br></code></pre></td></tr></table></figure>
 
-<p><img src="C:\Users\Chamb\AppData\Roaming\Typora\typora-user-images\image-20220211215632768.png" srcset="/img/loading.gif" lazyload alt="image-20220211215632768"></p>
+<p><img src="https://s3.bmp.ovh/imgs/2022/02/987f5303a789b0b1.png" srcset="/img/loading.gif" lazyload></p>
 <p>然后生成ssh密钥文件</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">ssh-keygen -t rsa -C GitHub注册邮箱<br><span class="hljs-comment">#注意，执行此行并不会立即生成.ssh文件，要按接下来的提示，敲几次回车才能成功生成.ssh</span><br></code></pre></td></tr></table></figure>
 
@@ -333,12 +334,12 @@
 <p>在Git Bash中检测GitHub公钥设置是否成功，输入 :</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">ssh git@github.com<br></code></pre></td></tr></table></figure>
 
-<p><img src="C:\Users\Chamb\AppData\Roaming\Typora\typora-user-images\image-20220211215730975.png" srcset="/img/loading.gif" lazyload alt="image-20220211215730975">出现以上内容则表示成功。</p>
+<p><img src="https://s3.bmp.ovh/imgs/2022/02/442ba79215296bd2.png" srcset="/img/loading.gif" lazyload>出现以上内容则表示成功。</p>
 <p>打开博客文件夹中的_config.yml文件，翻到最下面，修改为下图中的格式</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">deploy:</span><br>  <span class="hljs-attr">type:</span> <span class="hljs-string">git</span><br>  <span class="hljs-attr">repo:</span> <span class="hljs-string">git@github.com:xxxx.github.io.git</span><br>  <span class="hljs-attr">branch:</span> <span class="hljs-string">master</span> <br><span class="hljs-comment">#branch这一行可以省略  </span><br></code></pre></td></tr></table></figure>
 
 <p>记住一定要在冒号后面加空格！！！</p>
-<p><img src="C:\Users\Chamb\AppData\Roaming\Typora\typora-user-images\image-20220211220249720.png" srcset="/img/loading.gif" lazyload alt="image-20220211220249720"></p>
+<p><img src="https://s3.bmp.ovh/imgs/2022/02/31289c5c9fbc4de5.png" srcset="/img/loading.gif" lazyload></p>
 <p>其实就是给hexo deploy 这个命令做相应的配置，让hexo知道你要把博客部署在哪个位置，很显然，我们部署在我们GitHub的仓库里。最后安装Git部署插件，输入命令：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs basemake">npm install hexo-deployer-git --save<br></code></pre></td></tr></table></figure>
 
