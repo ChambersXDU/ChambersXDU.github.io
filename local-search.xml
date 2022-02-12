@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>多仓库部署hexo博客</title>
+    <link href="/2022/02/12/%E5%A4%9A%E4%BB%93%E5%BA%93%E9%83%A8%E7%BD%B2hexo%E5%8D%9A%E5%AE%A2/"/>
+    <url>/2022/02/12/%E5%A4%9A%E4%BB%93%E5%BA%93%E9%83%A8%E7%BD%B2hexo%E5%8D%9A%E5%AE%A2/</url>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>使用github部署博客虽然方便，但是由于github本身在美国，访问博客经常很慢或者打不开。因此考虑同时在国内的同类型网站上部署。</p><p>这里，我选择国内的<a href="https://gitee.com/">码云Gittee </a> 作为第二仓库。</p><h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><ul><li><p>首先我们先注册一个码云账号，建立一个 xxxxxx.gittee.io的仓库，在建立的时候默认选项就好，不需要添加其他东西。</p></li><li><p>在仓库页面的“服务”选项中打开Gittee Pages，提交你的身份信息并等待核验。</p></li><li><p>找到之前生成的.ssh文件，复制里面的.pub公钥到 Gittee - 安全设置 - SSH公钥。</p></li><li><p>在博客目录下打开bash，输入 <code>ssh -T git@gitee.com</code></p><figure class="highlight bash"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#若出现这句话说明成功连接，键入yes并回车即可成功链接</span><br>Are you sure you want to <span class="hljs-built_in">continue</span> connecting (<span class="hljs-built_in">yes</span>/no/[fingerprint])? <br></code></pre></td></tr></table></figure></li><li><p>打开_config.yml文件，配置deploy选项，在不同仓库地址之前加上描述以示区分（注意冒号后空格）</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">deploy:</span><br>  <span class="hljs-attr">type:</span> <span class="hljs-string">git</span><br>  <span class="hljs-attr">repo:</span> <br>    <span class="hljs-attr">github:</span> <span class="hljs-string">git@github.com:ChambersXDU/ChambersXDU.github.io.git</span><br>    <span class="hljs-attr">gittee:</span> <span class="hljs-string">git@gitee.com:aichenxdu/aichenxdu.gittee.io.git</span><br></code></pre></td></tr></table></figure></li><li><p>清除、生成、部署</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d<br></code></pre></td></tr></table></figure><p>可以看见</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo d<br>INFO  Validating config<br>INFO  Deploying: git<br>INFO  Clearing .deploy_git folder...<br>INFO  Copying files from public folder...<br>INFO  Copying files from extend <span class="hljs-built_in">dirs</span>...<br>On branch master<br>nothing to commit, working tree clean<br>Everything up-to-date<br>branch <span class="hljs-string">&#x27;master&#x27;</span> <span class="hljs-built_in">set</span> up to track <span class="hljs-string">&#x27;git@github.com:ChambersXDU/ChambersXDU.github.io.git/master&#x27;</span>.<br>On branch master<br>nothing to commit, working tree clean<br>Everything up-to-date<br>branch <span class="hljs-string">&#x27;master&#x27;</span> <span class="hljs-built_in">set</span> up to track <span class="hljs-string">&#x27;git@gitee.com:aichenxdu/aichenxdu.gittee.io.git/master&#x27;</span>.<br>INFO  Deploy <span class="hljs-keyword">done</span>: git<br></code></pre></td></tr></table></figure><p>这时你的博客已经成功部署到两个仓库了。</p></li></ul>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>hexo</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>汇编入门1</title>
     <link href="/2022/02/11/%E6%B1%87%E7%BC%96%E5%85%A5%E9%97%A81/"/>
     <url>/2022/02/11/%E6%B1%87%E7%BC%96%E5%85%A5%E9%97%A81/</url>
