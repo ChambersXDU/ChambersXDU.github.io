@@ -16,23 +16,21 @@
   <meta name="author" content="Chambers">
   <meta name="keywords" content="">
   
-    <meta name="description" content="二进制的四则运算加法 1234567891011121314151617181920212223242526272829303132333435363738394041@ how to calculate this?0000 01000000 0101 + -----------0000 1001@实际上就是数电里的加法器@steps:#1 异或 --&gt; 做加法0000 01000000 0">
+    <meta name="description" content="线性表结构表示1234struct sqList&amp;#123;    int data[MAX_SIZE];    int length;&#x2F;&#x2F;当前长度&amp;#125;  基本函数123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616">
 <meta property="og:type" content="article">
-<meta property="og:title" content="汇编入门1">
-<meta property="og:url" content="https://chambersxdu.github.io/2022/02/11/%E6%B1%87%E7%BC%96%E5%85%A5%E9%97%A81/index.html">
+<meta property="og:title" content="数据结构：链表">
+<meta property="og:url" content="https://chambersxdu.github.io/2022/02/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%9A%E9%93%BE%E8%A1%A8/index.html">
 <meta property="og:site_name" content="艾梣的博客">
-<meta property="og:description" content="二进制的四则运算加法 1234567891011121314151617181920212223242526272829303132333435363738394041@ how to calculate this?0000 01000000 0101 + -----------0000 1001@实际上就是数电里的加法器@steps:#1 异或 --&gt; 做加法0000 01000000 0">
+<meta property="og:description" content="线性表结构表示1234struct sqList&amp;#123;    int data[MAX_SIZE];    int length;&#x2F;&#x2F;当前长度&amp;#125;  基本函数123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190706225927723.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTE1NDYzNg==,size_16,color_FFFFFF,t_70">
-<meta property="article:published_time" content="2022-02-11T06:53:00.000Z">
-<meta property="article:modified_time" content="2022-02-11T08:32:46.741Z">
+<meta property="article:published_time" content="2022-02-13T02:59:04.000Z">
+<meta property="article:modified_time" content="2022-02-13T03:43:08.913Z">
 <meta property="article:author" content="Chambers">
-<meta property="article:tag" content="汇编">
+<meta property="article:tag" content="数据结构">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20190706225927723.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTE1NDYzNg==,size_16,color_FFFFFF,t_70">
   
   
-  <title>汇编入门1 - 艾梣的博客</title>
+  <title>数据结构：链表 - 艾梣的博客</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -190,7 +188,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="汇编入门1">
+            <span class="h2" id="subtitle" title="数据结构：链表">
               
             </span>
 
@@ -200,8 +198,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-02-11 14:53" pubdate>
-        2022年2月11日 下午
+      <time datetime="2022-02-13 10:59" pubdate>
+        2022年2月13日 上午
       </time>
     </span>
   
@@ -211,7 +209,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      609 字
+      1.1k 字
     </span>
   
 
@@ -220,7 +218,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      6 分钟
+      10 分钟
     </span>
   
 
@@ -257,31 +255,20 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">汇编入门1</h1>
+            <h1 style="display: none">数据结构：链表</h1>
             
               <p class="note note-info">
                 
-                  本文最后更新于：2 天前
+                  本文最后更新于：7 分钟前
                 
               </p>
             
             <div class="markdown-body">
-              <h2 id="二进制的四则运算"><a href="#二进制的四则运算" class="headerlink" title="二进制的四则运算"></a>二进制的四则运算</h2><p><strong>加法</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></div></td><td class="code"><pre><code class="hljs shell">@ how to calculate this?<br>0000 0100<br>0000 0101 + <br>-----------<br>0000 1001<br><br>@实际上就是数电里的加法器<br><br>@steps:<br><span class="hljs-meta">#</span><span class="language-bash">1 异或 --&gt; 做加法</span><br>0000 0100<br>0000 0101 xor<br>-----------<br>0000 0001<br><span class="hljs-meta"></span><br><span class="hljs-meta">#</span><span class="language-bash">2 与运算 --&gt; 输出进位，只有 1+1才会进位(若还有进位则继续，无进位则结束运算)</span><br>0000 0100<br>0000 0101 or<br>-----------<br>0000 0100<br><span class="hljs-meta"></span><br><span class="hljs-meta">#</span><span class="language-bash">3 左移2的结果 --&gt;进位要到高位去</span><br>0000 1000<br><br>@（重复1 2 3）<br><span class="hljs-meta"></span><br><span class="hljs-meta">#</span><span class="language-bash">4 1与3 异或 --&gt;让进位与和数相加</span><br>0000 0001<br>0000 1000 xor<br>------------<br>0000 1001<br><span class="hljs-meta"></span><br><span class="hljs-meta">#</span><span class="language-bash">5 与运算 --&gt; 若还有进位则继续重复，无进位则结束运算</span><br>0000 0001<br>0000 1000 or<br>-----------<br>0000 0000<br><br>@answer 0000 1001<br><br><br></code></pre></td></tr></table></figure>
+              <h2 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a>线性表</h2><h3 id="结构表示"><a href="#结构表示" class="headerlink" title="结构表示"></a>结构表示</h3><figure class="highlight cpp"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">struct</span> <span class="hljs-title class_">sqList</span>&#123;<br>    <span class="hljs-type">int</span> data[MAX_SIZE];<br>    <span class="hljs-type">int</span> length;<span class="hljs-comment">//当前长度</span><br>&#125;<br></code></pre></td></tr></table></figure>
 
-<p><img src="https://img-blog.csdnimg.cn/20190706225927723.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTE1NDYzNg==,size_16,color_FFFFFF,t_70" srcset="/img/loading.gif" lazyload alt="半加器"></p>
-<p><strong>减法</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs shell">4 - 5 = 4+(-5)<br><br>把&quot;减5&quot;变为&quot;加-5&quot;<br>然后其余步骤与加法无异<br><br>0000 0100<br>1111 1011 +<br>-----------<br>1111 1111<br></code></pre></td></tr></table></figure>
+<h3 id="基本函数"><a href="#基本函数" class="headerlink" title="基本函数"></a>基本函数</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">initList</span><span class="hljs-params">(sqList &amp;l)</span></span>&#123;<br>    <span class="hljs-built_in">memset</span>(l.data, <span class="hljs-number">0</span>, <span class="hljs-built_in">sizeof</span>(l.data));<br>    l.length = <span class="hljs-number">0</span>;<br>&#125;<br><br><span class="hljs-comment">//初始化前n个元素</span><br><span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">createList</span><span class="hljs-params">(sqList &amp;l, <span class="hljs-type">int</span> n)</span></span>&#123;<br>    <span class="hljs-keyword">if</span>(n &lt; <span class="hljs-number">0</span> || n &gt; MAX_SIZE)&#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>    &#125;<br><br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>;i&lt;n;i++)&#123;<br>        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>,&amp;l.data[i]);<br>        l.length++;<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>&#125;<br><br><span class="hljs-comment">//在l的第i个位置插入元素e（i从1开始）</span><br><span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">insert</span><span class="hljs-params">(sqList &amp;l, <span class="hljs-type">int</span> i, <span class="hljs-type">int</span> e)</span> </span>&#123;<br>    <span class="hljs-comment">//插的位置不合适</span><br>    <span class="hljs-keyword">if</span> (i &lt; <span class="hljs-number">1</span> || i &gt; l.length + <span class="hljs-number">1</span>) &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>    &#125;<br>    <span class="hljs-comment">//已满，不能插了</span><br>    <span class="hljs-keyword">if</span> (l.length &gt;= MAX_SIZE) &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>    &#125;<br>    <span class="hljs-comment">//从后往前逐个往后挪</span><br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = l.length; j &gt;= i; --j) &#123;<br>        l.data[j] = l.data[j - <span class="hljs-number">1</span>];<br>    &#125;<br>    l.data[i - <span class="hljs-number">1</span>] = e;<br>    <span class="hljs-comment">//别忘了表长度++</span><br>    l.length++;<br>&#125;<br><br><span class="hljs-comment">//删除第i个元素</span><br><span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">remove</span><span class="hljs-params">(sqList &amp;l, <span class="hljs-type">int</span> i)</span> </span>&#123;<br>    <span class="hljs-keyword">if</span> (i &lt; <span class="hljs-number">1</span> || i &gt; l.length) &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>    &#125;<br><br>    <span class="hljs-keyword">if</span> (l.length = <span class="hljs-number">0</span>) &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>    &#125;<br><br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = i; j &lt; l.length; ++j) &#123;<br>        l.data[j - <span class="hljs-number">1</span>] = l.data[j];<br>    &#125;<br>    l.length--;<br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>&#125;<br><br><span class="hljs-comment">//找到l中等于e的第一个元素并返回其下标，如没有则返回0</span><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">find</span><span class="hljs-params">(sqList &amp;l,<span class="hljs-type">int</span> e)</span></span>&#123;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; l.length; ++i) &#123;<br>        <span class="hljs-keyword">if</span> (l.data[i] == e)&#123;<br>            <span class="hljs-keyword">return</span> i;<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-
-
-<p><strong>乘法</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">x*y = x+x+x+···+x  <br></code></pre></td></tr></table></figure>
-
-<p><strong>除法</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">x/y = x能减几个y = x能加几个-y<br></code></pre></td></tr></table></figure>
-
-
+<h2 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h2><h3 id="结构表示-1"><a href="#结构表示-1" class="headerlink" title="结构表示"></a>结构表示</h3>
             </div>
             <hr>
             <div>
@@ -291,7 +278,7 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/%E6%B1%87%E7%BC%96/">汇编</a>
+                      <a class="hover-with-bg" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
                     
                   </div>
                 
@@ -308,9 +295,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/02/12/%E5%A4%9A%E4%BB%93%E5%BA%93%E9%83%A8%E7%BD%B2hexo%E5%8D%9A%E5%AE%A2/">
+                      <a href="/2022/02/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%9A%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">多仓库部署hexo博客</span>
+                        <span class="hidden-mobile">数据结构：栈与队列</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -318,8 +305,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/02/11/%E7%94%A8hexo%E4%B8%8Egithub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%9A%E6%96%B0%E6%89%8B%E6%8C%87%E5%8D%97/">
-                        <span class="hidden-mobile">用hexo与github搭建博客：新手指南</span>
+                      <a href="/2022/02/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%9A%E5%9B%BE/">
+                        <span class="hidden-mobile">数据结构：图</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
