@@ -16,23 +16,21 @@
   <meta name="author" content="Chambers">
   <meta name="keywords" content="">
   
-    <meta name="description" content="前言🌎使用github部署博客虽然方便，但是由于github本身在美国，访问博客经常很慢或者打不开。因此考虑同时在国内的同类型网站上部署。 这里，我选择国内的码云Gitee  作为第二仓库。 步骤 首先我们先注册一个码云账号，建立一个 xxxxxx.gitee.io的仓库，在建立的时候默认选项就好，不需要添加其他东西。  在仓库页面的“服务”选项中打开Gittee Pages，提交你的身份信息并">
+    <meta name="description" content="前言在写链表的时候经常会遇见这样子的表示方法 1234typedef struct node&amp;#123;    int data;    struct node *next;&amp;#125;Node,*Link;  但在c++中似乎又很少看见在定义结构体的时候使用typedef 解析 对于typedef 12typedef char zifu&#x2F;&#x2F;那么这时 zifu 可以用来代替 char   对于st">
 <meta property="og:type" content="article">
-<meta property="og:title" content="多仓库部署hexo博客">
-<meta property="og:url" content="http://chambersxdu.github.io/2022/02/12/%E5%A4%9A%E4%BB%93%E5%BA%93%E9%83%A8%E7%BD%B2hexo%E5%8D%9A%E5%AE%A2/index.html">
+<meta property="og:title" content="typedef struct与struct">
+<meta property="og:url" content="http://chambersxdu.github.io/2022/02/13/typedef-struct%E4%B8%8Estruct/index.html">
 <meta property="og:site_name" content="艾梣的博客">
-<meta property="og:description" content="前言🌎使用github部署博客虽然方便，但是由于github本身在美国，访问博客经常很慢或者打不开。因此考虑同时在国内的同类型网站上部署。 这里，我选择国内的码云Gitee  作为第二仓库。 步骤 首先我们先注册一个码云账号，建立一个 xxxxxx.gitee.io的仓库，在建立的时候默认选项就好，不需要添加其他东西。  在仓库页面的“服务”选项中打开Gittee Pages，提交你的身份信息并">
+<meta property="og:description" content="前言在写链表的时候经常会遇见这样子的表示方法 1234typedef struct node&amp;#123;    int data;    struct node *next;&amp;#125;Node,*Link;  但在c++中似乎又很少看见在定义结构体的时候使用typedef 解析 对于typedef 12typedef char zifu&#x2F;&#x2F;那么这时 zifu 可以用来代替 char   对于st">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://chambersxdu.github.io/aichenxdu.gitee.io/aichenxdu.gitee.io/2022/02/12/%E5%A4%9A%E4%BB%93%E5%BA%93%E9%83%A8%E7%BD%B2hexo%E5%8D%9A%E5%AE%A2/%E5%A4%9A%E4%BB%93%E5%BA%93%E9%83%A8%E7%BD%B2hexo%E5%8D%9A%E5%AE%A2/deploy.png">
-<meta property="article:published_time" content="2022-02-12T07:28:57.000Z">
-<meta property="article:modified_time" content="2022-02-13T04:12:23.848Z">
+<meta property="article:published_time" content="2022-02-13T06:03:08.000Z">
+<meta property="article:modified_time" content="2022-02-13T08:06:20.189Z">
 <meta property="article:author" content="Chambers">
-<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="c++">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://chambersxdu.github.io/aichenxdu.gitee.io/aichenxdu.gitee.io/2022/02/12/%E5%A4%9A%E4%BB%93%E5%BA%93%E9%83%A8%E7%BD%B2hexo%E5%8D%9A%E5%AE%A2/%E5%A4%9A%E4%BB%93%E5%BA%93%E9%83%A8%E7%BD%B2hexo%E5%8D%9A%E5%AE%A2/deploy.png">
   
   
-  <title>多仓库部署hexo博客 - 艾梣的博客</title>
+  <title>typedef struct与struct - 艾梣的博客</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -190,7 +188,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="多仓库部署hexo博客">
+            <span class="h2" id="subtitle" title="typedef struct与struct">
               
             </span>
 
@@ -200,8 +198,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-02-12 15:28" pubdate>
-        2022年2月12日 下午
+      <time datetime="2022-02-13 14:03" pubdate>
+        2022年2月13日 下午
       </time>
     </span>
   
@@ -211,7 +209,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.2k 字
+      1.3k 字
     </span>
   
 
@@ -220,7 +218,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      10 分钟
+      11 分钟
     </span>
   
 
@@ -257,7 +255,7 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">多仓库部署hexo博客</h1>
+            <h1 style="display: none">typedef struct与struct</h1>
             
               <p class="note note-info">
                 
@@ -266,30 +264,28 @@
               </p>
             
             <div class="markdown-body">
-              <h2 id="前言🌎"><a href="#前言🌎" class="headerlink" title="前言🌎"></a>前言🌎</h2><p>使用github部署博客虽然方便，但是由于github本身在美国，访问博客经常很慢或者打不开。因此考虑同时在国内的同类型网站上部署。</p>
-<p>这里，我选择国内的<a target="_blank" rel="noopener" href="https://gitee.com/">码云Gitee </a> 作为第二仓库。</p>
-<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><ul>
-<li><p>首先我们先注册一个码云账号，建立一个 xxxxxx.gitee.io的仓库，在建立的时候默认选项就好，不需要添加其他东西。</p>
-</li>
-<li><p>在仓库页面的“服务”选项中打开Gittee Pages，提交你的身份信息并等待核验⌛。</p>
-</li>
-<li><p>找到之前生成的.ssh文件，复制里面的.pub公钥到 Gitee - 安全设置 - SSH公钥。</p>
-</li>
-<li><p>在博客目录下打开bash，输入 <code>ssh -T git@gitee.com</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash"><span class="hljs-comment">#若出现这句话说明成功连接，键入yes并回车即可成功链接</span><br>Are you sure you want to <span class="hljs-built_in">continue</span> connecting (<span class="hljs-built_in">yes</span>/no/[fingerprint])? <br></code></pre></div></td></tr></table></figure>
-</li>
-<li><p>打开_config.yml文件，配置deploy选项，在不同仓库地址之前加上描述以示区分（📢注意冒号后空格）</p>
-<p><img src="/aichenxdu.gitee.io/aichenxdu.gitee.io/2022/02/12/%E5%A4%9A%E4%BB%93%E5%BA%93%E9%83%A8%E7%BD%B2hexo%E5%8D%9A%E5%AE%A2/%E5%A4%9A%E4%BB%93%E5%BA%93%E9%83%A8%E7%BD%B2hexo%E5%8D%9A%E5%AE%A2/deploy.png" srcset="/img/loading.gif" lazyload alt="deploy"></p>
-<figure class="highlight yaml"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs yaml"><span class="hljs-attr">deploy:</span><br>  <span class="hljs-attr">type:</span> <span class="hljs-string">git</span><br>  <span class="hljs-attr">repo:</span> <br>    <span class="hljs-attr">github:</span> <span class="hljs-string">git@github.com:ChambersXDU/ChambersXDU.github.io.git</span><br>    <span class="hljs-attr">gitee:</span> <span class="hljs-string">git@gitee.com:aichenxdu/aichenxdu.gitee.io.git</span><br></code></pre></div></td></tr></table></figure>
-</li>
-<li><p>清除、生成、部署</p>
-<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d<br></code></pre></div></td></tr></table></figure>
+              <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在写链表的时候经常会遇见这样子的表示方法</p>
+<figure class="highlight c++"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs c++"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> <span class="hljs-title class_">node</span>&#123;<br>    <span class="hljs-type">int</span> data;<br>    <span class="hljs-keyword">struct</span> <span class="hljs-title class_">node</span> *next;<br>&#125;Node,*Link;<br></code></pre></div></td></tr></table></figure>
 
-<p>可以看见</p>
-<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">$ hexo d<br>INFO  Validating config<br>INFO  Deploying: git<br>INFO  Clearing .deploy_git folder...<br>INFO  Copying files from public folder...<br>INFO  Copying files from extend <span class="hljs-built_in">dirs</span>...<br>On branch master<br>nothing to commit, working tree clean<br>Everything up-to-date<br>branch <span class="hljs-string">&#x27;master&#x27;</span> <span class="hljs-built_in">set</span> up to track <span class="hljs-string">&#x27;git@github.com:ChambersXDU/ChambersXDU.github.io.git/master&#x27;</span>.<br>On branch master<br>nothing to commit, working tree clean<br>Everything up-to-date<br>branch <span class="hljs-string">&#x27;master&#x27;</span> <span class="hljs-built_in">set</span> up to track <span class="hljs-string">&#x27;git@gitee.com:aichenxdu/aichenxdu.gitee.io.git/master&#x27;</span>.<br>INFO  Deploy <span class="hljs-keyword">done</span>: git<br></code></pre></div></td></tr></table></figure>
-
-<p>这时你的博客已经成功部署到两个仓库了✔️。</p>
+<p>但在c++中似乎又很少看见在定义结构体的时候使用<code>typedef</code></p>
+<h2 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h2><ul>
+<li><p>对于<code>typedef</code></p>
+<figure class="highlight c++"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs c++"><span class="hljs-keyword">typedef</span> <span class="hljs-type">char</span> zifu<br><span class="hljs-comment">//那么这时 zifu 可以用来代替 char </span><br></code></pre></div></td></tr></table></figure>
 </li>
+<li><p>对于<code>struct</code></p>
+<figure class="highlight c++"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs c++"><span class="hljs-comment">//1.没有tag，只能跟在后面立刻声明</span><br><span class="hljs-keyword">struct</span>&#123;<br>    <span class="hljs-type">char</span> name;<br>    <span class="hljs-type">int</span> ID;<br>&#125;x;<br><br><span class="hljs-comment">//2. 给出一个tag:Student</span><br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">Student</span>&#123;<br>    <span class="hljs-type">char</span> name;<br>    <span class="hljs-type">int</span> ID;<br>&#125;;<br><span class="hljs-comment">//在这之后就可以用struct Student来声明一个Student类型结构体</span><br></code></pre></div></td></tr></table></figure>
+</li>
+<li><p>一起使用</p>
+<figure class="highlight cpp"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs cpp"><span class="hljs-comment">//1.</span><br><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span>&#123;<br>    <span class="hljs-type">char</span> name;<br>    <span class="hljs-type">int</span> ID;<br>&#125;Student;<br><span class="hljs-comment">//作用类似struct Stuent,创造了一个叫Student的数据类型</span><br><br><span class="hljs-comment">//2.</span><br><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> <span class="hljs-title class_">Node</span>&#123;<br>    <span class="hljs-type">int</span> data;<br>    <span class="hljs-keyword">struct</span> <span class="hljs-title class_">Node</span> *next;<br>&#125;node;<br><span class="hljs-comment">//等效于两步</span><br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">Node</span>&#123;<br>    xxxxx;<br>&#125;;<br><span class="hljs-keyword">typedef</span> Node node<br></code></pre></div></td></tr></table></figure>
+</li>
+<li><p>C 与 C++中的区别</p>
+<p>如果只是为了声明一个“结构体变量”<code>var</code>，两者都可以简单的使用</p>
+<figure class="highlight c++"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs c++"><span class="hljs-comment">//1.</span><br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">tag</span>&#123;<br>    <span class="hljs-type">int</span> xxx;<br>    <span class="hljs-type">char</span> xxx;<br>&#125;var;<br><br><span class="hljs-comment">//2.</span><br><span class="hljs-keyword">struct</span>&#123;<br>    xxx;<br>&#125;var;<br><br><span class="hljs-comment">//3.</span><br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">tag</span>&#123;<br>    xxx;<br>&#125;;<br>strcut tag var;<br></code></pre></div></td></tr></table></figure>
+
+<p>但如果要声明一个“结构体类型”</p>
+<figure class="highlight c"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs c"><span class="hljs-comment">//c</span><br><br><span class="hljs-keyword">typedef</span> <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">Student</span>&#123;</span><br>    xxx;<br>&#125;Stu;<br><span class="hljs-comment">//这时Stu是一个类型，Stu == struct Student</span><br>Stu xiaoming;<br><br><span class="hljs-comment">//如果没有typedef</span><br><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">Student</span>&#123;</span><br>    xxx;<br>&#125;Stu;<br><span class="hljs-comment">//这时Stu是一个Student类型的变量，不能用来声明其他变量</span><br><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">Student</span> <span class="hljs-title">xiaoming</span>;</span><br></code></pre></div></td></tr></table></figure>
+
+<figure class="highlight c++"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs c++"><span class="hljs-comment">//C++</span><br><br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">Student</span>&#123;<br>    <span class="hljs-type">char</span> name;<br>&#125;;<br><span class="hljs-comment">//Student已经是一个类型，可以直接声明变量</span><br>Student xiaoming;<br><br><span class="hljs-comment">//假如在c++中使用typedef</span><br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">Student</span>&#123;<br>    <span class="hljs-type">char</span> name;<br>&#125;stu1;<br><span class="hljs-comment">//这里的stu1是个变量</span><br>stu1.name可以直接访问<br><br><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> <span class="hljs-title class_">Stundent</span>&#123;<br>    <span class="hljs-type">char</span> name;<br>&#125;stu2;<br><span class="hljs-comment">//这里的stu2是个结构体类型，相当于struct Student</span><br>stu2 s2;<br>需要先声明出一个变量s2，s2.name才能继续访问<br></code></pre></div></td></tr></table></figure></li>
 </ul>
 
             </div>
@@ -301,7 +297,7 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/hexo/">hexo</a>
+                      <a class="hover-with-bg" href="/tags/c/">c++</a>
                     
                   </div>
                 
@@ -318,18 +314,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/02/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%9A%E5%9B%BE/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">数据结构：图</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/02/11/%E6%B1%87%E7%BC%96%E5%85%A5%E9%97%A81/">
-                        <span class="hidden-mobile">汇编入门1</span>
+                      <a href="/2022/02/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%9A%E6%A0%91/">
+                        <span class="hidden-mobile">数据结构：树</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
